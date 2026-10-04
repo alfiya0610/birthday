@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Avii ♡</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         MUSIC
+    ====================================================== -->
+
+    <audio id="bgMusic" loop>
+        <source src="music/song.mp3.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn" aria-label="Music">
+        ♫
+    </button>
+
+
+    <!-- =====================================================
+         PAGE 1 — PASSWORD
+    ====================================================== -->
+
+    <section class="page active" id="page1">
+
+        <div class="intro-shell">
+
+            <div class="intro-photo">
+
+                <img src="images/picture1.jpg.jpeg" alt="Avez">
+
+                <div class="photo-overlay"></div>
+
+                <div class="photo-caption">
+                    <span>A LITTLE SOMETHING</span>
+                    <strong>made just for you</strong>
+                </div>
+
+            </div>
+
+
+            <div class="password-card">
+
+                <p class="tiny-label">PRIVATE LITTLE SURPRISE</p>
+
+                <h1>
+                    A tiny door<br>
+                    <span>to something special</span>
+                </h1>
+
+                <p class="password-intro">
+                    There is a little world waiting behind these four numbers.
+                    You probably already know the key.
+                </p>
+
+
+                <div class="password-display" id="passwordDisplay">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <div class="keypad">
+
+                    <button class="key" data-number="1">1</button>
+                    <button class="key" data-number="2">2</button>
+                    <button class="key" data-number="3">3</button>
+
+                    <button class="key" data-number="4">4</button>
+                    <button class="key" data-number="5">5</button>
+                    <button class="key" data-number="6">6</button>
+
+                    <button class="key" data-number="7">7</button>
+                    <button class="key" data-number="8">8</button>
+                    <button class="key" data-number="9">9</button>
+
+                    <button class="key key-empty" disabled></button>
+                    <button class="key" data-number="0">0</button>
+                    <button class="key key-delete" data-delete="true">⌫</button>
+
+                </div>
+
+                <p class="password-hint">
+                    hint: it's a date you should never forget ♡
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 2 — QUESTION
+    ====================================================== -->
+
+    <section class="page" id="page2">
+
+        <div class="soft-glow"></div>
+
+        <div class="question-card">
+
+            <p class="eyebrow">ONE LITTLE QUESTION</p>
+
+            <h2>
+                I made a little<br>
+                <span>surprise for you.</span>
+            </h2>
+
+            <div class="question-line"></div>
+
+            <p class="question-text">
+                It has a few memories, a few words I don't always know
+                how to say out loud, and a tiny piece of my heart.
+            </p>
+
+            <p class="question-main">
+                Will you stay for it?
+            </p>
+
+
+            <div class="answer-buttons">
+
+                <button class="yes-btn" onclick="goToPage(3)">
+                    Of course ♡
+                </button>
+
+                <button class="no-btn" onclick="goToPage(9)">
+                    No
+                </button>
+
+            </div>
+
+            <p class="bottom-note">
+                choose carefully... I'm watching 👀
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 3 — BIRTHDAY HERO
+    ====================================================== -->
+
+    <section class="page birthday-page" id="page3">
+
+        <div class="birthday-glow"></div>
+
+        <div class="birthday-content">
+
+            <p class="birthday-small">
+                TODAY IS ALL ABOUT YOU
+            </p>
+
+            <p class="birthday-date">
+                06 • 10 • YOU
+            </p>
+
+
+            <div class="birthday-title">
+
+                <h2>Happy Birthday</h2>
+
+                <div class="avii-name">
+                    Avii
+                    <span>♡</span>
+                </div>
+
+            </div>
+
+
+            <p class="birthday-message">
+                Today isn't just another date on the calendar.
+                It's the day the world got a little more special
+                because you were born.
+            </p>
+
+            <p class="birthday-message second">
+                And somehow, I got lucky enough to have you
+                become such a beautiful part of my world.
+            </p>
+
+
+            <button class="continue-btn" onclick="goToPage(4)">
+                there's more for you
+                <span>→</span>
+            </button>
+
+        </div>
+
+        <div class="floating-flower flower-one">✿</div>
+        <div class="floating-flower flower-two">♡</div>
+        <div class="floating-flower flower-three">✦</div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 4 — MEMORIES
+    ====================================================== -->
+
+    <section class="page memories-page" id="page4">
+
+        <div class="section-heading">
+
+            <p class="eyebrow">A FEW LITTLE MEMORIES</p>
+
+            <h2>
+                Little pieces<br>
+                <span>of us.</span>
+            </h2>
+
+            <p>
+                Four pictures could never hold all the memories,
+                but these are a few I wanted to keep close.
+            </p>
+
+        </div>
+
+
+        <div class="photo-wall">
+
+            <div class="memory-photo photo-a">
+                <img src="images/picture1.jpg.jpeg" alt="Memory 1">
+                <span>♡</span>
+            </div>
+
+            <div class="memory-photo photo-b">
+                <img src="images/picture2.jpg.jpeg" alt="Memory 2">
+                <span>♡</span>
+            </div>
+
+            <div class="memory-photo photo-c">
+                <img src="images/picture3.jpg.jpeg" alt="Memory 3">
+                <span>♡</span>
+            </div>
+
+            <div class="memory-photo photo-d">
+                <img src="images/picture4.jpg.jpeg" alt="Memory 4">
+                <span>♡</span>
+            </div>
+
+        </div>
+
+
+        <button class="continue-btn small-btn" onclick="goToPage(5)">
+            keep going →
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 5 — THINGS TO REMEMBER
+    ====================================================== -->
+
+    <section class="page remember-page" id="page5">
+
+        <div class="remember-heading">
+
+            <p class="eyebrow">IF YOU EVER FORGET</p>
+
+            <h2>
+                Things I hope<br>
+                <span>you always remember.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="remember-cards">
+
+            <div class="remember-card">
+
+                <span class="card-number">01</span>
+
+                <div class="card-icon">♡</div>
+
+                <h3>You are enough.</h3>
+
+                <p>
+                    On the days when you doubt yourself,
+                    I hope you remember that you never have
+                    to become someone else to be worthy of love.
+                </p>
+
+            </div>
+
+
+            <div class="remember-card featured">
+
+                <span class="card-number">02</span>
+
+                <div class="card-icon">✦</div>
+
+                <h3>You are loved.</h3>
+
+                <p>
+                    More than I probably say, more than these
+                    little words can explain, and in all the
+                    quiet moments too.
+                </p>
+
+            </div>
+
+
+            <div class="remember-card">
+
+                <span class="card-number">03</span>
+
+                <div class="card-icon">∞</div>
+
+                <h3>You matter to me.</h3>
+
+                <p>
+                    Your presence, your smile, your silly little
+                    habits and even your annoying moments —
+                    all of them became a part of my favourite life.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="continue-btn small-btn" onclick="goToPage(6)">
+            one more thing →
+        </button>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 6 — LETTER
+    ====================================================== -->
+
+    <section class="page letter-page" id="page6">
+
+        <div class="letter-side">
+
+            <p class="eyebrow">A LETTER FOR YOU</p>
+
+            <h2>
+                From my<br>
+                <span>heart to yours.</span>
+            </h2>
+
+            <div class="letter-flower">✿</div>
+
+        </div>
+
+
+        <div class="letter-paper">
+
+            <p class="letter-dear">
+                Dear Avii,
+            </p>
+
+            <p>
+                I don't think I will ever find the perfect words
+                for everything you mean to me. But if I had to
+                try, I would say that having you in my life has
+                made ordinary moments feel a little more beautiful.
+            </p>
+
+            <p>
+                Thank you for all the laughs, the conversations,
+                the stupid little fights, the random memories,
+                the comfort, and every moment in between.
+            </p>
+
+            <p>
+                I hope this birthday reminds you of something
+                very simple — you are deeply loved, you are
+                incredibly special, and you deserve every
+                beautiful thing that comes your way.
+            </p>
+
+            <p>
+                No matter how much life changes, I hope we
+                keep collecting little moments that one day
+                we'll look back at and smile about.
+            </p>
+
+            <p class="letter-love">
+                Happy Birthday, my favourite person. ♡
+            </p>
+
+            <button class="paper-button" onclick="goToPage(7)">
+                there's a little surprise →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 7 — GIFT
+    ====================================================== -->
+
+    <section class="page surprise-page" id="page7">
+
+        <div class="surprise-card">
+
+            <p class="eyebrow">ONE LAST LITTLE THING</p>
+
+            <div class="gift-box">
+
+                <div class="gift-lid"></div>
+
+                <div class="gift-body"></div>
+
+                <div class="gift-ribbon vertical"></div>
+
+                <div class="gift-ribbon horizontal"></div>
+
+                <div class="gift-bow">
+                    <span></span>
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <h2>
+                A little gift<br>
+                <span>from me to you.</span>
+            </h2>
+
+            <p>
+                It isn't wrapped in paper.
+                It isn't something you can keep on a shelf.
+                It's simply a reminder that somewhere in this
+                huge world, there is someone who is always
+                quietly cheering for you.
+            </p>
+
+
+            <button class="reveal-btn" id="revealBtn">
+                open your surprise ♡
+            </button>
+
+
+            <div class="surprise-message" id="surpriseMessage">
+
+                <span>♡</span>
+
+                <p>
+                    If I could give you one thing today,
+                    I'd give you the ability to see yourself
+                    through my eyes — just for a moment —
+                    so you could understand how special
+                    you really are.
+                </p>
+
+            </div>
+
+
+            <button class="continue-btn small-btn" onclick="goToPage(8)">
+                keep this with you →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 8 — END
+    ====================================================== -->
+
+    <section class="page ending-page" id="page8">
+
+        <div class="ending-inner">
+
+            <p class="eyebrow">AND THAT'S ALL...</p>
+
+            <div class="ending-heart">♡</div>
+
+            <h2>
+                Happy Birthday,
+                <span>Avii.</span>
+            </h2>
+
+            <p>
+                I hope this little corner of the internet made
+                you smile, even for a few minutes.
+            </p>
+
+            <p>
+                And I hope you always know that some of my
+                happiest memories have you somewhere in them.
+            </p>
+
+            <p class="ending-sign">
+                With all my love ♡
+            </p>
+
+
+            <div class="ending-buttons">
+
+                <button class="back-button" onclick="goToPage(7)">
+                    ← go back
+                </button>
+
+                <button class="back-button" onclick="goToPage(1)">
+                    start again ↺
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PAGE 9 — NO / RETRY
+    ====================================================== -->
+
+    <section class="page retry-page" id="page9">
+
+        <div class="retry-card">
+
+            <div class="retry-heart">♡</div>
+
+            <p class="eyebrow">EXCUSE ME?</p>
+
+            <h2>
+                You chose <span>no?</span>
+            </h2>
+
+            <p>
+                Hmm... I don't think that was the answer
+                you were supposed to choose. 😌
+            </p>
+
+            <p>
+                I spent all this time making this tiny little
+                surprise for you. So come on...
+                give it another chance.
+            </p>
+
+            <button class="yes-btn retry-btn" onclick="goToPage(2)">
+                okay okay, show me ♡
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
